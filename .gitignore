@@ -1,0 +1,9 @@
+.DS_Store
+.localized
+*.xccheckout
+build/
+xcuserdata
+*.pbxuser
+Pods/
+Pair.xcodeproj/xcuserdata/chris.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+Pair.xcodeproj/project.xcworkspace/xcuserdata/chris.xcuserdatad/WorkspaceSettings.xcsettings

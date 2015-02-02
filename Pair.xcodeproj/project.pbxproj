@@ -13,6 +13,12 @@
 		832C85001A7FE34700ECB2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832C84FF1A7FE34700ECB2E4 /* Images.xcassets */; };
 		832C85031A7FE34700ECB2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832C85011A7FE34700ECB2E4 /* Main.storyboard */; };
 		832C850F1A7FE34700ECB2E4 /* PairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C850E1A7FE34700ECB2E4 /* PairTests.m */; };
+		832C851B1A80099A00ECB2E4 /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C851A1A80099A00ECB2E4 /* me.png */; };
+		832C851D1A800B7300ECB2E4 /* PRGUserViewLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */; };
+		832C85231A800BBF00ECB2E4 /* PRGUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C85221A800BBF00ECB2E4 /* PRGUserView.m */; };
+		832C85251A800E2700ECB2E4 /* PRGUserViewRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */; };
+		832C85281A80148600ECB2E4 /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C85261A80148600ECB2E4 /* chris.png */; };
+		832C85291A80148600ECB2E4 /* wes.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C85271A80148600ECB2E4 /* wes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,13 @@
 		832C85081A7FE34700ECB2E4 /* PairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832C850D1A7FE34700ECB2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832C850E1A7FE34700ECB2E4 /* PairTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PairTests.m; sourceTree = "<group>"; };
+		832C851A1A80099A00ECB2E4 /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
+		832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewLeft.xib; sourceTree = "<group>"; };
+		832C85211A800BBF00ECB2E4 /* PRGUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUserView.h; sourceTree = "<group>"; };
+		832C85221A800BBF00ECB2E4 /* PRGUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUserView.m; sourceTree = "<group>"; };
+		832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewRight.xib; sourceTree = "<group>"; };
+		832C85261A80148600ECB2E4 /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
+		832C85271A80148600ECB2E4 /* wes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +92,9 @@
 		832C84F41A7FE34700ECB2E4 /* Pair */ = {
 			isa = PBXGroup;
 			children = (
+				832C85261A80148600ECB2E4 /* chris.png */,
+				832C85271A80148600ECB2E4 /* wes.png */,
+				832C851A1A80099A00ECB2E4 /* me.png */,
 				832C84F71A7FE34700ECB2E4 /* AppDelegate.h */,
 				832C84F81A7FE34700ECB2E4 /* AppDelegate.m */,
 				832C84FC1A7FE34700ECB2E4 /* ViewController.h */,
@@ -86,6 +102,10 @@
 				832C84FF1A7FE34700ECB2E4 /* Images.xcassets */,
 				832C85011A7FE34700ECB2E4 /* Main.storyboard */,
 				832C84F51A7FE34700ECB2E4 /* Supporting Files */,
+				832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */,
+				832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */,
+				832C85211A800BBF00ECB2E4 /* PRGUserView.h */,
+				832C85221A800BBF00ECB2E4 /* PRGUserView.m */,
 			);
 			path = Pair;
 			sourceTree = "<group>";
@@ -196,8 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832C851B1A80099A00ECB2E4 /* me.png in Resources */,
 				832C85001A7FE34700ECB2E4 /* Images.xcassets in Resources */,
+				832C851D1A800B7300ECB2E4 /* PRGUserViewLeft.xib in Resources */,
+				832C85281A80148600ECB2E4 /* chris.png in Resources */,
+				832C85291A80148600ECB2E4 /* wes.png in Resources */,
 				832C85031A7FE34700ECB2E4 /* Main.storyboard in Resources */,
+				832C85251A800E2700ECB2E4 /* PRGUserViewRight.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +242,7 @@
 			files = (
 				832C84FE1A7FE34700ECB2E4 /* ViewController.m in Sources */,
 				832C84FB1A7FE34700ECB2E4 /* main.m in Sources */,
+				832C85231A800BBF00ECB2E4 /* PRGUserView.m in Sources */,
 				832C84F91A7FE34700ECB2E4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
