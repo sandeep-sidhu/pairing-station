@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
@@ -36,7 +37,7 @@
                 </button>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edf-HY-yc6">
                     <rect key="frame" x="212" y="11" width="80" height="80"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wes" id="IHL-0Q-WZn"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="IHL-0Q-WZn"/>
                 </imageView>
             </subviews>
             <backgroundFilters>
@@ -48,12 +49,11 @@
                 </ciFilter>
             </backgroundFilters>
             <connections>
-                <outlet property="image" destination="edf-HY-yc6" id="k8o-wY-l8S"/>
+                <outlet property="emailLabel" destination="jJ3-bC-7a8" id="aF1-nf-X8I"/>
+                <outlet property="imageView" destination="edf-HY-yc6" id="fea-Qy-Ki5"/>
+                <outlet property="nameLabel" destination="S5x-Rp-21I" id="i68-ZI-Db7"/>
             </connections>
             <point key="canvasLocation" x="240" y="453"/>
         </view>
     </objects>
-    <resources>
-        <image name="wes" width="504" height="808"/>
-    </resources>
 </document>

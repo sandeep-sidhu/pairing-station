@@ -1,7 +1,8 @@
 #import <Cocoa/Cocoa.h>
+@class PRGUser;
 
 @interface PRGUserView : NSView
 
-@property (nonatomic, strong) IBOutlet NSImageView *image;
+@property (nonatomic, strong) PRGUser *user;
 
 @end

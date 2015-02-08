@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F53DC8BC1DB898CB092E514 /* libPods-Pair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48832000DDBBD8356EC164 /* libPods-Pair.a */; };
 		832C84F91A7FE34700ECB2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C84F81A7FE34700ECB2E4 /* AppDelegate.m */; };
 		832C84FB1A7FE34700ECB2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C84FA1A7FE34700ECB2E4 /* main.m */; };
-		832C84FE1A7FE34700ECB2E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C84FD1A7FE34700ECB2E4 /* ViewController.m */; };
 		832C85001A7FE34700ECB2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832C84FF1A7FE34700ECB2E4 /* Images.xcassets */; };
 		832C85031A7FE34700ECB2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832C85011A7FE34700ECB2E4 /* Main.storyboard */; };
 		832C850F1A7FE34700ECB2E4 /* PairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C850E1A7FE34700ECB2E4 /* PairTests.m */; };
-		832C851B1A80099A00ECB2E4 /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C851A1A80099A00ECB2E4 /* me.png */; };
-		832C851D1A800B7300ECB2E4 /* PRGUserViewLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */; };
-		832C85231A800BBF00ECB2E4 /* PRGUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C85221A800BBF00ECB2E4 /* PRGUserView.m */; };
-		832C85251A800E2700ECB2E4 /* PRGUserViewRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */; };
-		832C85281A80148600ECB2E4 /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C85261A80148600ECB2E4 /* chris.png */; };
-		832C85291A80148600ECB2E4 /* wes.png in Resources */ = {isa = PBXBuildFile; fileRef = 832C85271A80148600ECB2E4 /* wes.png */; };
+		8392964C1A88171F00B60BC5 /* PRGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8392964B1A88171F00B60BC5 /* PRGUser.m */; };
+		83ACA8CB1A881ADC002E42A9 /* PRGDisplayCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */; };
+		83ACA8CF1A881F21002E42A9 /* NSImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */; };
+		83ACA8D41A882422002E42A9 /* PRGUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8D11A882422002E42A9 /* PRGUserView.m */; };
+		83ACA8D51A882422002E42A9 /* PRGUserViewLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ACA8D21A882422002E42A9 /* PRGUserViewLeft.xib */; };
+		83ACA8D61A882422002E42A9 /* PRGUserViewRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,20 +37,24 @@
 		832C84F71A7FE34700ECB2E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		832C84F81A7FE34700ECB2E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		832C84FA1A7FE34700ECB2E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		832C84FC1A7FE34700ECB2E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		832C84FD1A7FE34700ECB2E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		832C84FF1A7FE34700ECB2E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		832C85021A7FE34700ECB2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		832C85081A7FE34700ECB2E4 /* PairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832C850D1A7FE34700ECB2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832C850E1A7FE34700ECB2E4 /* PairTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PairTests.m; sourceTree = "<group>"; };
-		832C851A1A80099A00ECB2E4 /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
-		832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewLeft.xib; sourceTree = "<group>"; };
-		832C85211A800BBF00ECB2E4 /* PRGUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUserView.h; sourceTree = "<group>"; };
-		832C85221A800BBF00ECB2E4 /* PRGUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUserView.m; sourceTree = "<group>"; };
-		832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewRight.xib; sourceTree = "<group>"; };
-		832C85261A80148600ECB2E4 /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
-		832C85271A80148600ECB2E4 /* wes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wes.png; sourceTree = "<group>"; };
+		8392964A1A88171F00B60BC5 /* PRGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUser.h; sourceTree = "<group>"; };
+		8392964B1A88171F00B60BC5 /* PRGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUser.m; sourceTree = "<group>"; };
+		83ACA8C91A881ADC002E42A9 /* PRGDisplayCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGDisplayCoordinator.h; sourceTree = "<group>"; };
+		83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGDisplayCoordinator.m; sourceTree = "<group>"; };
+		83ACA8CD1A881F21002E42A9 /* NSImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		83ACA8D01A882422002E42A9 /* PRGUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUserView.h; sourceTree = "<group>"; };
+		83ACA8D11A882422002E42A9 /* PRGUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUserView.m; sourceTree = "<group>"; };
+		83ACA8D21A882422002E42A9 /* PRGUserViewLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewLeft.xib; sourceTree = "<group>"; };
+		83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewRight.xib; sourceTree = "<group>"; };
+		99E3E1839C1D3DC625AE13A5 /* Pods-Pair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.release.xcconfig"; sourceTree = "<group>"; };
+		AF48832000DDBBD8356EC164 /* libPods-Pair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E6DED7C622D97F2B34ACCE /* Pods-Pair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F53DC8BC1DB898CB092E514 /* libPods-Pair.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,8 @@
 				832C84F41A7FE34700ECB2E4 /* Pair */,
 				832C850B1A7FE34700ECB2E4 /* PairTests */,
 				832C84F31A7FE34700ECB2E4 /* Products */,
+				F15DA5F90FD57402DCFE6EF8 /* Pods */,
+				A6F318D0E1B9FD3C1B125FE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,20 +99,15 @@
 		832C84F41A7FE34700ECB2E4 /* Pair */ = {
 			isa = PBXGroup;
 			children = (
-				832C85261A80148600ECB2E4 /* chris.png */,
-				832C85271A80148600ECB2E4 /* wes.png */,
-				832C851A1A80099A00ECB2E4 /* me.png */,
+				83ACA8CC1A881F0D002E42A9 /* Categories */,
+				839296471A8816B700B60BC5 /* DisplayCoordinator */,
+				839296481A8816B700B60BC5 /* Model */,
+				839296491A8816B700B60BC5 /* Views */,
 				832C84F71A7FE34700ECB2E4 /* AppDelegate.h */,
 				832C84F81A7FE34700ECB2E4 /* AppDelegate.m */,
-				832C84FC1A7FE34700ECB2E4 /* ViewController.h */,
-				832C84FD1A7FE34700ECB2E4 /* ViewController.m */,
 				832C84FF1A7FE34700ECB2E4 /* Images.xcassets */,
 				832C85011A7FE34700ECB2E4 /* Main.storyboard */,
 				832C84F51A7FE34700ECB2E4 /* Supporting Files */,
-				832C851C1A800B7300ECB2E4 /* PRGUserViewLeft.xib */,
-				832C85241A800E2700ECB2E4 /* PRGUserViewRight.xib */,
-				832C85211A800BBF00ECB2E4 /* PRGUserView.h */,
-				832C85221A800BBF00ECB2E4 /* PRGUserView.m */,
 			);
 			path = Pair;
 			sourceTree = "<group>";
@@ -136,6 +138,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		839296471A8816B700B60BC5 /* DisplayCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				83ACA8C91A881ADC002E42A9 /* PRGDisplayCoordinator.h */,
+				83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */,
+			);
+			path = DisplayCoordinator;
+			sourceTree = "<group>";
+		};
+		839296481A8816B700B60BC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8392964A1A88171F00B60BC5 /* PRGUser.h */,
+				8392964B1A88171F00B60BC5 /* PRGUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		839296491A8816B700B60BC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83ACA8D01A882422002E42A9 /* PRGUserView.h */,
+				83ACA8D11A882422002E42A9 /* PRGUserView.m */,
+				83ACA8D21A882422002E42A9 /* PRGUserViewLeft.xib */,
+				83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83ACA8CC1A881F0D002E42A9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				83ACA8CD1A881F21002E42A9 /* NSImageView+AFNetworking.h */,
+				83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A6F318D0E1B9FD3C1B125FE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF48832000DDBBD8356EC164 /* libPods-Pair.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F15DA5F90FD57402DCFE6EF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4E6DED7C622D97F2B34ACCE /* Pods-Pair.debug.xcconfig */,
+				99E3E1839C1D3DC625AE13A5 /* Pods-Pair.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 832C85121A7FE34700ECB2E4 /* Build configuration list for PBXNativeTarget "Pair" */;
 			buildPhases = (
+				E6FF4F9B953AC638B0B14EA8 /* Check Pods Manifest.lock */,
 				832C84EE1A7FE34700ECB2E4 /* Sources */,
 				832C84EF1A7FE34700ECB2E4 /* Frameworks */,
 				832C84F01A7FE34700ECB2E4 /* Resources */,
+				637AED8253A1ABE836BC3E4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,13 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832C851B1A80099A00ECB2E4 /* me.png in Resources */,
 				832C85001A7FE34700ECB2E4 /* Images.xcassets in Resources */,
-				832C851D1A800B7300ECB2E4 /* PRGUserViewLeft.xib in Resources */,
-				832C85281A80148600ECB2E4 /* chris.png in Resources */,
-				832C85291A80148600ECB2E4 /* wes.png in Resources */,
+				83ACA8D51A882422002E42A9 /* PRGUserViewLeft.xib in Resources */,
+				83ACA8D61A882422002E42A9 /* PRGUserViewRight.xib in Resources */,
 				832C85031A7FE34700ECB2E4 /* Main.storyboard in Resources */,
-				832C85251A800E2700ECB2E4 /* PRGUserViewRight.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,14 +291,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		637AED8253A1ABE836BC3E4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pair/Pods-Pair-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FF4F9B953AC638B0B14EA8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		832C84EE1A7FE34700ECB2E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832C84FE1A7FE34700ECB2E4 /* ViewController.m in Sources */,
+				8392964C1A88171F00B60BC5 /* PRGUser.m in Sources */,
 				832C84FB1A7FE34700ECB2E4 /* main.m in Sources */,
-				832C85231A800BBF00ECB2E4 /* PRGUserView.m in Sources */,
+				83ACA8CF1A881F21002E42A9 /* NSImageView+AFNetworking.m in Sources */,
+				83ACA8D41A882422002E42A9 /* PRGUserView.m in Sources */,
+				83ACA8CB1A881ADC002E42A9 /* PRGDisplayCoordinator.m in Sources */,
 				832C84F91A7FE34700ECB2E4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -347,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -355,22 +446,26 @@
 		};
 		832C85131A7FE34700ECB2E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E6DED7C622D97F2B34ACCE /* Pods-Pair.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		832C85141A7FE34700ECB2E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99E3E1839C1D3DC625AE13A5 /* Pods-Pair.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -430,6 +525,7 @@
 				832C85141A7FE34700ECB2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		832C85151A7FE34700ECB2E4 /* Build configuration list for PBXNativeTarget "PairTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +534,7 @@
 				832C85171A7FE34700ECB2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
