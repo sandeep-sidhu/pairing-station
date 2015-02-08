@@ -2,6 +2,11 @@
 #import "PRGUserView.h"
 #import "PRGUser.h"
 
+typedef NS_ENUM(NSInteger, PRGSeatSide) {
+    PRGSeatSideLeft,
+    PRGSeatSideRight
+};
+
 @implementation PRGDisplayCoordinator
 
 BOOL waitingToShow = NO;
@@ -45,13 +50,25 @@ BOOL waitingToShow = NO;
     
     [[self.overlayWindow contentView] addTrackingArea:self.rightTrackingArea];
     
+    __weak PRGDisplayCoordinator *weakSelf = self;
     
     self.leftUserOverlay = [PRGUserView leftUserView];
+    [self.leftUserOverlay setChangeUserHandler:^{
+        [weakSelf promptForLoginOnSeatSide:PRGSeatSideLeft];
+    }];
     [self.overlayWindow.contentView addSubview:self.leftUserOverlay];
     
     self.rightUserOverlay = [PRGUserView rightUserView];
+    [self.rightUserOverlay setChangeUserHandler:^{
+        [weakSelf promptForLoginOnSeatSide:PRGSeatSideRight];
+    }];
     [self.overlayWindow.contentView addSubview:self.rightUserOverlay];
     self.rightUserOverlay.frame = NSMakeRect(mainScreenBounds.size.width - overlayWidth, 0, overlayWidth, 110);
+}
+
+
+- (void)promptForLoginOnSeatSide:(PRGSeatSide)seatSide {
+    NSLog(@"Prompting for login on seatSide: %ld", seatSide);
 }
 
 

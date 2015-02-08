@@ -36,6 +36,13 @@
 }
 
 
+- (IBAction)userTappedChangeUser:(id)sender {
+    if (self.changeUserHandler) {
+        self.changeUserHandler();
+    }
+}
+
+
 - (void)setUser:(PRGUser *)user {
     _user = user;
     

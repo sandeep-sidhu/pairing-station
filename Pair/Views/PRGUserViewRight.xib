@@ -34,6 +34,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="userTappedChangeUser:" target="H3k-jT-3dH" id="iRz-cU-nzn"/>
+                    </connections>
                 </button>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edf-HY-yc6">
                     <rect key="frame" x="212" y="11" width="80" height="80"/>
