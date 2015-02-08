@@ -15,7 +15,7 @@
 @implementation PRGUserView
 
 - (void)awakeFromNib {
-   [self setWantsLayer:YES]; // required on NSView to use layer manipulation
+    [self setWantsLayer:YES]; // required on NSView to use layer manipulation
     self.layer.backgroundColor = [NSColor whiteColor].CGColor;
     
     [self.emailLabel setStringValue:@"Nobody.. yet"];
@@ -43,6 +43,29 @@
     [self.emailLabel setStringValue:user.email];
     
     [self.imageView setImageWithURL:[NSURL URLWithString:[user imageUrlPath]]];
+}
+
+
++ (PRGUserView *)leftUserView {
+    return [self userViewWithNibName:@"PRGUserViewLeft"];
+}
+
+
++ (PRGUserView *)rightUserView {
+    return [self userViewWithNibName:@"PRGUserViewRight"];
+}
+
+
++ (PRGUserView *)userViewWithNibName:(NSString *)nibName {
+    NSArray *arrayOfViews;
+    [[NSBundle mainBundle] loadNibNamed:nibName owner:nil topLevelObjects:&arrayOfViews];
+    
+    for (id obj in arrayOfViews) {
+        if ([obj isKindOfClass:[NSView class]]) {
+            return obj;
+        }
+    }
+    return nil;
 }
 
 @end

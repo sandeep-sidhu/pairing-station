@@ -5,4 +5,9 @@
 
 @property (nonatomic, strong) PRGUser *user;
 
++ (PRGUserView *)leftUserView;
++ (PRGUserView *)rightUserView;
+
++ (PRGUserView *)userViewWithNibName:(NSString *)nibName;
+
 @end

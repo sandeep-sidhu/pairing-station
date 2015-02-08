@@ -45,26 +45,13 @@ BOOL waitingToShow = NO;
     
     [[self.overlayWindow contentView] addTrackingArea:self.rightTrackingArea];
     
-    NSArray *arrayOfViews;
-    [[NSBundle mainBundle] loadNibNamed:@"PRGUserViewLeft" owner:nil topLevelObjects:&arrayOfViews];
     
-    for (id obj in arrayOfViews) {
-        if ([obj isKindOfClass:[NSView class]]) {
-            self.leftUserOverlay = obj;
-            [self.overlayWindow.contentView addSubview:self.leftUserOverlay];
-        }
-    }
+    self.leftUserOverlay = [PRGUserView leftUserView];
+    [self.overlayWindow.contentView addSubview:self.leftUserOverlay];
     
-    
-    [[NSBundle mainBundle] loadNibNamed:@"PRGUserViewRight" owner:nil topLevelObjects:&arrayOfViews];
-    
-    for (id obj in arrayOfViews) {
-        if ([obj isKindOfClass:[NSView class]]) {
-            self.rightUserOverlay = obj;
-            [self.overlayWindow.contentView addSubview:self.rightUserOverlay];
-            ((NSView *)obj).frame = NSMakeRect(mainScreenBounds.size.width - overlayWidth, 0, overlayWidth, 110);
-        }
-    }
+    self.rightUserOverlay = [PRGUserView rightUserView];
+    [self.overlayWindow.contentView addSubview:self.rightUserOverlay];
+    self.rightUserOverlay.frame = NSMakeRect(mainScreenBounds.size.width - overlayWidth, 0, overlayWidth, 110);
 }
 
 
