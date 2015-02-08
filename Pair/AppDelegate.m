@@ -1,16 +1,4 @@
-//
-//  AppDelegate.m
-//  Pair
-//
-//  Created by Chris Maddern on 2/2/15.
-//  Copyright (c) 2015 Button. All rights reserved.
-//
-
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
 
 BOOL waitingToShow = NO;
 NSWindow *trackingWin;
@@ -18,9 +6,16 @@ NSWindow *trackingWin;
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    NSScreen *mainScreen    = [NSScreen mainScreen];
+    NSRect mainScreenBounds = mainScreen.frame;
+    
+    NSInteger pairingOverlayWidth   = 300;
+    NSInteger pairingOverlayHeight  = 100;
+    
     trackingWin=[[NSWindow alloc]
                  // NOTE: The coordinates of NSWindow are anchored at the bottom left
-                 initWithContentRect:NSMakeRect(10,950,2000,100)
+                 initWithContentRect:NSMakeRect(0, mainScreenBounds.size.height - 70, mainScreenBounds.size.width, pairingOverlayHeight)
                  styleMask:NSBorderlessWindowMask
                  backing:NSBackingStoreBuffered
                  defer:YES];
@@ -36,12 +31,21 @@ NSWindow *trackingWin;
     [trackingWin makeKeyAndOrderFront:self];
     
     // Tracking areas need to be setup to handle when the mouse moves into or out of the main window
-    NSTrackingArea *trackingArea = [[NSTrackingArea alloc] initWithRect:NSMakeRect(0, 0, 1950, 100)
+    NSTrackingArea *trackingArea = [[NSTrackingArea alloc] initWithRect:NSMakeRect(0, 0, pairingOverlayWidth, pairingOverlayHeight)
                                                                 options:NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways
                                                                   owner:self
                                                                userInfo:nil];
     
     [[trackingWin contentView] addTrackingArea:trackingArea];
+    NSTrackingArea *trackingArea2 = [[NSTrackingArea alloc] initWithRect:NSMakeRect(mainScreenBounds.size.width - pairingOverlayWidth,
+                                                                                    0,
+                                                                                    pairingOverlayWidth,
+                                                                                    pairingOverlayHeight)
+                                                                options:NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways
+                                                                  owner:self
+                                                               userInfo:nil];
+    
+    [[trackingWin contentView] addTrackingArea:trackingArea2];
     
     NSArray *arrayOfViews;
     [[NSBundle mainBundle] loadNibNamed:@"PRGUserViewLeft" owner:nil topLevelObjects:&arrayOfViews];
@@ -58,19 +62,15 @@ NSWindow *trackingWin;
     for (id obj in arrayOfViews) {
         if ([obj isKindOfClass:[NSView class]]) {
             [trackingWin.contentView addSubview:obj];
-            ((NSView *)obj).frame = NSMakeRect(1600, 0, 300, 110);
+            ((NSView *)obj).frame = NSMakeRect(mainScreenBounds.size.width - pairingOverlayWidth, 0, pairingOverlayWidth, 110);
         }
     }
     
     
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
 
-- (void)mouseEntered:(NSEvent *)theEvent
-{
+- (void)mouseEntered:(NSEvent *)theEvent {
     waitingToShow = YES;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (!waitingToShow) {
@@ -89,9 +89,8 @@ NSWindow *trackingWin;
     
 }
 
-// If the mouse exits a window, go make sure we fade out
-- (void)mouseExited:(NSEvent *)theEvent
-{
+
+- (void)mouseExited:(NSEvent *)theEvent {
     waitingToShow = NO;
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
         
