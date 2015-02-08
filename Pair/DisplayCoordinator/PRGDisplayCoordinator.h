@@ -16,4 +16,7 @@
 
 - (void)initializePairingView;
 
+- (void)showPairingOverlay;
+- (void)hidePairingOverlay;
+
 @end

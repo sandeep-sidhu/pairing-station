@@ -1,7 +1,5 @@
 #import "NSImageView+AFNetworking.h"
-
 #import <objc/runtime.h>
-
 #import "AFHTTPRequestOperation.h"
 
 #pragma mark -
