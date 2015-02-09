@@ -14,11 +14,12 @@
 		832C85031A7FE34700ECB2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832C85011A7FE34700ECB2E4 /* Main.storyboard */; };
 		832C850F1A7FE34700ECB2E4 /* PairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832C850E1A7FE34700ECB2E4 /* PairTests.m */; };
 		8392964C1A88171F00B60BC5 /* PRGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8392964B1A88171F00B60BC5 /* PRGUser.m */; };
-		83ACA8CB1A881ADC002E42A9 /* PRGDisplayCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */; };
 		83ACA8CF1A881F21002E42A9 /* NSImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */; };
 		83ACA8D41A882422002E42A9 /* PRGUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8D11A882422002E42A9 /* PRGUserView.m */; };
 		83ACA8D51A882422002E42A9 /* PRGUserViewLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ACA8D21A882422002E42A9 /* PRGUserViewLeft.xib */; };
 		83ACA8D61A882422002E42A9 /* PRGUserViewRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */; };
+		83ACA8DA1A897130002E42A9 /* PRGGitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8D91A897130002E42A9 /* PRGGitManager.m */; };
+		83ACA8DB1A897189002E42A9 /* PRGStationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CA1A881ADC002E42A9 /* PRGStationCoordinator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,14 +45,16 @@
 		832C850E1A7FE34700ECB2E4 /* PairTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PairTests.m; sourceTree = "<group>"; };
 		8392964A1A88171F00B60BC5 /* PRGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUser.h; sourceTree = "<group>"; };
 		8392964B1A88171F00B60BC5 /* PRGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUser.m; sourceTree = "<group>"; };
-		83ACA8C91A881ADC002E42A9 /* PRGDisplayCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGDisplayCoordinator.h; sourceTree = "<group>"; };
-		83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGDisplayCoordinator.m; sourceTree = "<group>"; };
+		83ACA8C91A881ADC002E42A9 /* PRGStationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGStationCoordinator.h; sourceTree = "<group>"; };
+		83ACA8CA1A881ADC002E42A9 /* PRGStationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGStationCoordinator.m; sourceTree = "<group>"; };
 		83ACA8CD1A881F21002E42A9 /* NSImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		83ACA8D01A882422002E42A9 /* PRGUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGUserView.h; sourceTree = "<group>"; };
 		83ACA8D11A882422002E42A9 /* PRGUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGUserView.m; sourceTree = "<group>"; };
 		83ACA8D21A882422002E42A9 /* PRGUserViewLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewLeft.xib; sourceTree = "<group>"; };
 		83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewRight.xib; sourceTree = "<group>"; };
+		83ACA8D81A897130002E42A9 /* PRGGitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGGitManager.h; sourceTree = "<group>"; };
+		83ACA8D91A897130002E42A9 /* PRGGitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGGitManager.m; sourceTree = "<group>"; };
 		99E3E1839C1D3DC625AE13A5 /* Pods-Pair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.release.xcconfig"; sourceTree = "<group>"; };
 		AF48832000DDBBD8356EC164 /* libPods-Pair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E6DED7C622D97F2B34ACCE /* Pods-Pair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				83ACA8CC1A881F0D002E42A9 /* Categories */,
-				839296471A8816B700B60BC5 /* DisplayCoordinator */,
+				839296471A8816B700B60BC5 /* StationCoordinator */,
+				83ACA8D71A89711F002E42A9 /* Git */,
 				839296481A8816B700B60BC5 /* Model */,
 				839296491A8816B700B60BC5 /* Views */,
 				832C84F71A7FE34700ECB2E4 /* AppDelegate.h */,
@@ -138,13 +142,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		839296471A8816B700B60BC5 /* DisplayCoordinator */ = {
+		839296471A8816B700B60BC5 /* StationCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				83ACA8C91A881ADC002E42A9 /* PRGDisplayCoordinator.h */,
-				83ACA8CA1A881ADC002E42A9 /* PRGDisplayCoordinator.m */,
+				83ACA8C91A881ADC002E42A9 /* PRGStationCoordinator.h */,
+				83ACA8CA1A881ADC002E42A9 /* PRGStationCoordinator.m */,
 			);
-			path = DisplayCoordinator;
+			path = StationCoordinator;
 			sourceTree = "<group>";
 		};
 		839296481A8816B700B60BC5 /* Model */ = {
@@ -174,6 +178,15 @@
 				83ACA8CE1A881F21002E42A9 /* NSImageView+AFNetworking.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		83ACA8D71A89711F002E42A9 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				83ACA8D81A897130002E42A9 /* PRGGitManager.h */,
+				83ACA8D91A897130002E42A9 /* PRGGitManager.m */,
+			);
+			path = Git;
 			sourceTree = "<group>";
 		};
 		A6F318D0E1B9FD3C1B125FE1 /* Frameworks */ = {
@@ -330,10 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8392964C1A88171F00B60BC5 /* PRGUser.m in Sources */,
+				83ACA8DB1A897189002E42A9 /* PRGStationCoordinator.m in Sources */,
 				832C84FB1A7FE34700ECB2E4 /* main.m in Sources */,
 				83ACA8CF1A881F21002E42A9 /* NSImageView+AFNetworking.m in Sources */,
 				83ACA8D41A882422002E42A9 /* PRGUserView.m in Sources */,
-				83ACA8CB1A881ADC002E42A9 /* PRGDisplayCoordinator.m in Sources */,
+				83ACA8DA1A897130002E42A9 /* PRGGitManager.m in Sources */,
 				832C84F91A7FE34700ECB2E4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

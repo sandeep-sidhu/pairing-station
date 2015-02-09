@@ -1,7 +1,9 @@
 @import AppKit;
-@class PRGUserView, PRGUser;
+@class PRGUserView, PRGUser, PRGGitManager;
 
-@interface PRGDisplayCoordinator : NSObject
+@interface PRGStationCoordinator : NSObject
+
+@property (nonatomic, strong) PRGGitManager *gitManager;
 
 @property (nonatomic, strong) PRGUser *leftUser;
 @property (nonatomic, strong) PRGUser *rightUser;

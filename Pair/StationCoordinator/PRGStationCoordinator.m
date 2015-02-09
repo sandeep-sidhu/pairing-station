@@ -1,4 +1,4 @@
-#import "PRGDisplayCoordinator.h"
+#import "PRGStationCoordinator.h"
 #import "PRGUserView.h"
 #import "PRGUser.h"
 
@@ -7,9 +7,9 @@ typedef NS_ENUM(NSInteger, PRGSeatSide) {
     PRGSeatSideRight
 };
 
-@implementation PRGDisplayCoordinator
+@implementation PRGStationCoordinator
 
-BOOL waitingToShow = NO;
+BOOL waitingToShowOverlay = NO;
 
 - (void)initializePairingView {
     NSScreen *mainScreen    = [NSScreen mainScreen];
@@ -50,7 +50,7 @@ BOOL waitingToShow = NO;
     
     [[self.overlayWindow contentView] addTrackingArea:self.rightTrackingArea];
     
-    __weak PRGDisplayCoordinator *weakSelf = self;
+    __weak PRGStationCoordinator *weakSelf = self;
     
     self.leftUserOverlay = [PRGUserView leftUserView];
     [self.leftUserOverlay setChangeUserHandler:^{
@@ -73,9 +73,9 @@ BOOL waitingToShow = NO;
 
 
 - (void)mouseEntered:(NSEvent *)theEvent {
-    waitingToShow = YES;
+    waitingToShowOverlay = YES;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (!waitingToShow) {
+        if (!waitingToShowOverlay) {
             return;
         }
         [self showPairingOverlay];
@@ -85,7 +85,7 @@ BOOL waitingToShow = NO;
 
 
 - (void)mouseExited:(NSEvent *)theEvent {
-    waitingToShow = NO;
+    waitingToShowOverlay = NO;
     [self hidePairingOverlay];
 }
 
