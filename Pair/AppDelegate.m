@@ -15,18 +15,6 @@
     [self.stationCoordinator initializePairingView];
     
     [self.stationCoordinator showPairingOverlay];
-    //[self setupTestUsers];
-}
-
-- (void)setupTestUsers {
-    
-    PRGUser *chrisUser = [[PRGUser alloc] init];
-    chrisUser.name = @"chrismaddern";
-    [self.stationCoordinator setLeftUser:chrisUser];
-    
-    PRGUser *wesUser = [[PRGUser alloc] init];
-    wesUser.name = @"wessmith";
-    [self.stationCoordinator setRightUser:wesUser];
 }
 
 @end
