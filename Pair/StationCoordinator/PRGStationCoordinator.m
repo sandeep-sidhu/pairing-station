@@ -76,6 +76,8 @@ BOOL shouldLockOverlayOn  = NO;
     }];
     [self.overlayWindow.contentView addSubview:self.rightUserOverlay];
     self.rightUserOverlay.frame = NSMakeRect(mainScreenBounds.size.width - overlayWidth, 0, overlayWidth, 110);
+    
+    [self applyUsersToGitProfile];
 }
 
 
