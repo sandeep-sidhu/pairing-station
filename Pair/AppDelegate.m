@@ -1,33 +1,31 @@
 #import "AppDelegate.h"
-#import "PGRStationCoordinator.h"
+#import "PRGStationCoordinator.h"
 #import "PRGUser.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) PGRStationCoordinator *stationCoordinator;
+@property (nonatomic, strong) PRGStationCoordinator *stationCoordinator;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.stationCoordinator = [[PGRStationCoordinator alloc] init];
+    self.stationCoordinator = [[PRGStationCoordinator alloc] init];
     [self.stationCoordinator initializePairingView];
     
-    [self setupTestUsers];
     [self.stationCoordinator showPairingOverlay];
+    //[self setupTestUsers];
 }
 
 - (void)setupTestUsers {
     
     PRGUser *chrisUser = [[PRGUser alloc] init];
-    chrisUser.name = @"Christopop";
-    chrisUser.email = @"chris@usebutton.com";
+    chrisUser.name = @"chrismaddern";
     [self.stationCoordinator setLeftUser:chrisUser];
     
     PRGUser *wesUser = [[PRGUser alloc] init];
-    wesUser.name = @"Wes Smith";
-    wesUser.email = @"wes@usebutton.com";
+    wesUser.name = @"wessmith";
     [self.stationCoordinator setRightUser:wesUser];
 }
 

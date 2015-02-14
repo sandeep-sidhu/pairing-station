@@ -1,9 +1,10 @@
 @import AppKit;
-@class PRGUserView, PRGUser, PRGGitManager;
+@class PRGUserView, PRGUser, PRGGitManager, PRGGitHubAPI;
 
 @interface PRGStationCoordinator : NSObject
 
 @property (nonatomic, strong) PRGGitManager *gitManager;
+@property (nonatomic, strong) PRGGitHubAPI *gitHubAPI;
 
 @property (nonatomic, strong) PRGUser *leftUser;
 @property (nonatomic, strong) PRGUser *rightUser;

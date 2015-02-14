@@ -2,4 +2,6 @@
 
 @interface PRGGitManager : NSObject
 
+- (void)setConfigUsername:(NSString *)name;
+
 @end

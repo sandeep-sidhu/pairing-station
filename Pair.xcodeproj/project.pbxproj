@@ -20,6 +20,7 @@
 		83ACA8D61A882422002E42A9 /* PRGUserViewRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */; };
 		83ACA8DA1A897130002E42A9 /* PRGGitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8D91A897130002E42A9 /* PRGGitManager.m */; };
 		83ACA8DB1A897189002E42A9 /* PRGStationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ACA8CA1A881ADC002E42A9 /* PRGStationCoordinator.m */; };
+		83B3EAF61A8FE0A600A2A767 /* PRGGitHubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3EAF51A8FE0A600A2A767 /* PRGGitHubAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		83ACA8D31A882422002E42A9 /* PRGUserViewRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PRGUserViewRight.xib; sourceTree = "<group>"; };
 		83ACA8D81A897130002E42A9 /* PRGGitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGGitManager.h; sourceTree = "<group>"; };
 		83ACA8D91A897130002E42A9 /* PRGGitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGGitManager.m; sourceTree = "<group>"; };
+		83B3EAF41A8FE0A600A2A767 /* PRGGitHubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRGGitHubAPI.h; sourceTree = "<group>"; };
+		83B3EAF51A8FE0A600A2A767 /* PRGGitHubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRGGitHubAPI.m; sourceTree = "<group>"; };
 		99E3E1839C1D3DC625AE13A5 /* Pods-Pair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.release.xcconfig"; sourceTree = "<group>"; };
 		AF48832000DDBBD8356EC164 /* libPods-Pair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E6DED7C622D97F2B34ACCE /* Pods-Pair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pair/Pods-Pair.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 				83ACA8CC1A881F0D002E42A9 /* Categories */,
 				839296471A8816B700B60BC5 /* StationCoordinator */,
 				83ACA8D71A89711F002E42A9 /* Git */,
+				83B3EAF31A8FE07C00A2A767 /* GitHubAPI */,
 				839296481A8816B700B60BC5 /* Model */,
 				839296491A8816B700B60BC5 /* Views */,
 				832C84F71A7FE34700ECB2E4 /* AppDelegate.h */,
@@ -187,6 +191,15 @@
 				83ACA8D91A897130002E42A9 /* PRGGitManager.m */,
 			);
 			path = Git;
+			sourceTree = "<group>";
+		};
+		83B3EAF31A8FE07C00A2A767 /* GitHubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				83B3EAF41A8FE0A600A2A767 /* PRGGitHubAPI.h */,
+				83B3EAF51A8FE0A600A2A767 /* PRGGitHubAPI.m */,
+			);
+			path = GitHubAPI;
 			sourceTree = "<group>";
 		};
 		A6F318D0E1B9FD3C1B125FE1 /* Frameworks */ = {
@@ -349,6 +362,7 @@
 				83ACA8D41A882422002E42A9 /* PRGUserView.m in Sources */,
 				83ACA8DA1A897130002E42A9 /* PRGGitManager.m in Sources */,
 				832C84F91A7FE34700ECB2E4 /* AppDelegate.m in Sources */,
+				83B3EAF61A8FE0A600A2A767 /* PRGGitHubAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

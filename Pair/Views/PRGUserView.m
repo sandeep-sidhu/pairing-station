@@ -1,16 +1,18 @@
 @import QuartzCore;
 #import "PRGUserView.h"
 #import "PRGUser.h"
+#import <AFNetworking/AFNetworking.h>
 #import "NSImageView+AFNetworking.h"
 
 @interface PRGUserView ()
 
 @property (nonatomic, strong) IBOutlet NSTextField *nameLabel;
-@property (nonatomic, strong) IBOutlet NSTextField *emailLabel;
 
 @property (nonatomic, strong) IBOutlet NSImageView *imageView;
 
 @end
+
+static AFHTTPRequestOperationManager *requestManager;
 
 @implementation PRGUserView
 
@@ -18,7 +20,6 @@
     [self setWantsLayer:YES]; // required on NSView to use layer manipulation
     self.layer.backgroundColor = [NSColor whiteColor].CGColor;
     
-    [self.emailLabel setStringValue:@"Nobody.. yet"];
     [self.nameLabel setStringValue:@"Come pair!"];
     [self.imageView setImage:nil];
 }
@@ -47,9 +48,9 @@
     _user = user;
     
     [self.nameLabel setStringValue:user.name];
-    [self.emailLabel setStringValue:user.email];
+    NSString *imageUrlPath = user.imageUrl ?: [user imageUrlPath];
     
-    [self.imageView setImageWithURL:[NSURL URLWithString:[user imageUrlPath]]];
+    [self.imageView setImageWithURL:[NSURL URLWithString:imageUrlPath]];
 }
 
 

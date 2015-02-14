@@ -13,18 +13,10 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5x-Rp-21I">
-                    <rect key="frame" x="12" y="57" width="187" height="33"/>
+                    <rect key="frame" x="12" y="46" width="187" height="33"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Wes" id="bJH-N9-kKQ">
                         <font key="font" size="20" name="AvenirNext-Regular"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJ3-bC-7a8">
-                    <rect key="frame" x="-2" y="30" width="201" height="33"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="wes@usebutton.com" id="njc-Q4-b4Y">
-                        <font key="font" size="14" name="AvenirNext-Regular"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
@@ -52,7 +44,6 @@
                 </ciFilter>
             </backgroundFilters>
             <connections>
-                <outlet property="emailLabel" destination="jJ3-bC-7a8" id="aF1-nf-X8I"/>
                 <outlet property="imageView" destination="edf-HY-yc6" id="fea-Qy-Ki5"/>
                 <outlet property="nameLabel" destination="S5x-Rp-21I" id="i68-ZI-Db7"/>
             </connections>

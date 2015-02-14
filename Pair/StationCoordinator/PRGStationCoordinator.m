@@ -1,6 +1,8 @@
 #import "PRGStationCoordinator.h"
 #import "PRGUserView.h"
 #import "PRGUser.h"
+#import "PRGGitManager.h"
+#import "PRGGitHubAPI.h"
 
 typedef NS_ENUM(NSInteger, PRGSeatSide) {
     PRGSeatSideLeft,
@@ -10,6 +12,16 @@ typedef NS_ENUM(NSInteger, PRGSeatSide) {
 @implementation PRGStationCoordinator
 
 BOOL waitingToShowOverlay = NO;
+BOOL shouldLockOverlayOn  = NO;
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _gitManager = [[PRGGitManager alloc] init];
+        _gitHubAPI  = [[PRGGitHubAPI alloc] init];
+    }
+    return self;
+}
 
 - (void)initializePairingView {
     NSScreen *mainScreen    = [NSScreen mainScreen];
@@ -68,7 +80,42 @@ BOOL waitingToShowOverlay = NO;
 
 
 - (void)promptForLoginOnSeatSide:(PRGSeatSide)seatSide {
-    NSLog(@"Prompting for login on seatSide: %ld", seatSide);
+    shouldLockOverlayOn = YES;
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Enter your Github username"];
+    [alert addButtonWithTitle:@"Ok"];
+    [alert addButtonWithTitle:@"Cancel"];
+    
+    NSString *username;
+    NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input setStringValue:@""];
+    
+    [alert setAccessoryView:input];
+    NSInteger button = [alert runModal];
+    if (button == NSAlertFirstButtonReturn) {
+        username = [input stringValue];
+    }
+    
+    [self.gitHubAPI fetchUserWithName:username
+                           completion:^(NSDictionary *userDict) {
+                               if (!userDict || !userDict[@"login"]) {
+                                   shouldLockOverlayOn = NO;
+                                   return;
+                               }
+                               PRGUser *user = [[PRGUser alloc] init];
+                               user.name        = username;
+                               user.email       = @"";
+                               user.imageUrl    = userDict[@"avatar_url"];
+                               
+                               if (seatSide == PRGSeatSideLeft) {
+                                   [self setLeftUser:user];
+                               }
+                               else {
+                                   [self setRightUser:user];
+                               }
+                               shouldLockOverlayOn = NO;
+                           }];
 }
 
 
@@ -86,6 +133,9 @@ BOOL waitingToShowOverlay = NO;
 
 - (void)mouseExited:(NSEvent *)theEvent {
     waitingToShowOverlay = NO;
+    if (shouldLockOverlayOn) {
+        return;
+    }
     [self hidePairingOverlay];
 }
 
@@ -117,12 +167,30 @@ BOOL waitingToShowOverlay = NO;
 - (void)setLeftUser:(PRGUser *)user {
     _leftUser = user;
     [self.leftUserOverlay setUser:user];
+    [self applyUsersToGitProfile];
 }
 
 
 - (void)setRightUser:(PRGUser *)user {
     _rightUser = user;
     [self.rightUserOverlay setUser:user];
+    [self applyUsersToGitProfile];
+}
+
+
+- (void)applyUsersToGitProfile {
+    NSString *nameString;
+    if (!_leftUser.name && !_rightUser.name) {
+        nameString = @"Pairing Station";
+    }
+    else if (_leftUser.name && _rightUser.name) {
+        nameString = [NSString stringWithFormat:@"%@ and %@", _leftUser.name, _rightUser.name];
+    }
+    else {
+        nameString = _leftUser.name ?: _rightUser.name;
+    }
+    
+    [self.gitManager setConfigUsername:nameString];
 }
 
 @end
